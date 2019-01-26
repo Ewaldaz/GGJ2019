@@ -997,6 +997,7 @@ MonoBehaviour:
   txtName: {fileID: 2030156629}
   txtOnline: {fileID: 29375189}
   onlinePlayers: []
+  playersConnected: 0
 --- !u!1 &2013163576
 GameObject:
   m_ObjectHideFlags: 0

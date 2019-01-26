@@ -11,7 +11,15 @@ public class GameLoader : NetworkBehaviour
     public Text txtName;
     public Text txtOnline;
     public List<string> onlinePlayers;
-    
+
+    [SyncVar(hook = "Changed")]
+    public int playersConnected = 0;
+
+    public void Changed(int newVal)
+    {
+        Debug.Log($"New val: {newVal}");
+    }
+
     void Start()
     {
         var nc = networkManager.StartHost();
@@ -25,8 +33,11 @@ public class GameLoader : NetworkBehaviour
 
     void Update()
     {
-        txtOnline.text = $"Online: {networkManager.numPlayers}";
-       // txtOnline.text = $"Online: {NetworkServer.connections.Count}";
+        if (NetworkServer.connections.Count > 0)
+        {
+            playersConnected = NetworkServer.connections.Count;
+        }
+        txtOnline.text = $"Online: {playersConnected}";
     }
 
     public void OnPlayerConnected(NetworkIdentity player)
