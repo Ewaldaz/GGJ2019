@@ -34,11 +34,13 @@ public class Controller2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerBody.transform.position += new Vector3(myInput.x, 0, myInput.y);
+        playerBody.transform.position += new Vector3(myInput.x, 0, myInput.y); // love how simple this is
     }
 
-    //I just Love these
+    //I just Love these, very nice and not hard way to do debug better
 
+
+    //call doDebug once every frame
     private void doDebug() {
         addToLog("magic stick of direction normalized");
         addToLog("\nDirection :");
@@ -49,12 +51,12 @@ public class Controller2 : MonoBehaviour
 
 
     }
-
+    //end of frame, after print, do cleanup. 
     private void clearLog()
     {
         LogMessage = LogStart;
     }
-
+    // this is a good. One GameObject can print out many variables without clunking up the console.
     private void addToLog(string words)
     {
         LogMessage = string.Format("{0} {1}", LogMessage, words);
