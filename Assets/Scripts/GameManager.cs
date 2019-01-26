@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -9,19 +8,20 @@ public class GameManager : NetworkBehaviour
 {
     public static GameManager Instance;
     public Text txtOnline;
-    public SyncListString onlinePlayers = new SyncListString();
+  //  public SyncListString onlinePlayers = new SyncListString();
 
-    [SyncVar(hook = "Changed")]
+   // [SyncVar]
     public int playersConnected = 0;
+    
 
     public void Changed(int newVal)
     {
         txtOnline.text = $"Online: {playersConnected}" + Environment.NewLine;
 
-        foreach (var name in onlinePlayers)
-        {
-            txtOnline.text += name;
-        }
+      //  foreach (var name in onlinePlayers)
+      //  {
+      //      txtOnline.text += name;
+      //  }
     }
 
     void Update()
@@ -29,7 +29,8 @@ public class GameManager : NetworkBehaviour
         if (NetworkServer.connections.Count > 0 && playersConnected != NetworkServer.connections.Count)
         {
             playersConnected = NetworkServer.connections.Count;
-            Changed(playersConnected);
+          //  Changed(playersConnected);
+        //  NetworkServer.SendToAll()
         }
     }
 
