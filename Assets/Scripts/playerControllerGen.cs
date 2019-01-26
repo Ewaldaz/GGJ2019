@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class playerControllerGen : MonoBehaviour
 {
     public worldGen world;
     // Update is called once per frame

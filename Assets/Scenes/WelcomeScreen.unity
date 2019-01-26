@@ -440,6 +440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510f96a9de91e664d87965c5051a1681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtOnline: {fileID: 0}
+  playersConnected: 0
 --- !u!4 &407995481
 Transform:
   m_ObjectHideFlags: 0

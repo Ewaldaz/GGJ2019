@@ -118,8 +118,8 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-ca593cdd4c8d0464daaa92c925cdc4cb Assembly-CSharp.dll:.playerController
-6afeae742050d015a8fc53436f4ca1c0 Assembly-CSharp.dll:.worldGen
+ca593cdd4c8d0464daaa92c925cdc4cb Assembly-CSharp.dll:.playerControllerGen
+c5ac3c7eb96dbb7945d1fe495362db71 Assembly-CSharp.dll:.worldGen
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -167,3 +167,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 38cdabcd8e310627addd7dc13cccac5e Assembly-CSharp.dll:.CameraFollow
 afcb260430310236b0fc245853c29ffa Assembly-CSharp.dll:.AuraController
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+17de158573e8f21587e5eb496c1061db Assembly-CSharp.dll:.PlayerStats

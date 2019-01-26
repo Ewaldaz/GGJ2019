@@ -30,7 +30,7 @@ public class GameLoader : NetworkBehaviour
 
     public virtual void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
     {
-        //
+        Debug.Log("OnServerAddPlayer");
     }
 
 }

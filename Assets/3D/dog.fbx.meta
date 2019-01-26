@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: e54489555a674da44881780f658de4b5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Base
+    100004: //RootNode
+    100006: FrontLeftLeg
+    100008: FrontLeftLeg2
+    100010: FrontLeftLeg3
+    100012: FrontLeftLeg3_end
+    100014: FrontRightLeg
+    100016: FrontRightLeg2
+    100018: FrontRightLeg3
+    100020: FrontRightLeg3_end
+    100022: Good Boy
+    100024: Head
+    100026: LeftEar
+    100028: LeftEar_end
+    100030: Necc
+    100032: RearLeftLeg
+    100034: RearLeftLeg2
+    100036: RearLeftLeg3
+    100038: RearLeftLeg3_end
+    100040: RearRightLeg
+    100042: RearRightLeg2
+    100044: RearRightLeg3
+    100046: RearRightLeg3_end
+    100048: RightEar
+    100050: RightEar_end
+    100052: Tail
+    100054: Tail2
+    100056: Tail3
+    100058: Tail3_end
+    400000: Armature
+    400002: Base
+    400004: //RootNode
+    400006: FrontLeftLeg
+    400008: FrontLeftLeg2
+    400010: FrontLeftLeg3
+    400012: FrontLeftLeg3_end
+    400014: FrontRightLeg
+    400016: FrontRightLeg2
+    400018: FrontRightLeg3
+    400020: FrontRightLeg3_end
+    400022: Good Boy
+    400024: Head
+    400026: LeftEar
+    400028: LeftEar_end
+    400030: Necc
+    400032: RearLeftLeg
+    400034: RearLeftLeg2
+    400036: RearLeftLeg3
+    400038: RearLeftLeg3_end
+    400040: RearRightLeg
+    400042: RearRightLeg2
+    400044: RearRightLeg3
+    400046: RearRightLeg3_end
+    400048: RightEar
+    400050: RightEar_end
+    400052: Tail
+    400054: Tail2
+    400056: Tail3
+    400058: Tail3_end
+    2100000: Doge
+    4300000: Good Boy
+    9500000: //RootNode
+    13700000: Good Boy
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
