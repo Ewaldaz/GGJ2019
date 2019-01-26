@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Smell : MonoBehaviour
 {
+    //this is the smell to be left behind slave 
     // these objects instantiated by players onEnter to new tile
     private AuraController myManager;
     private Color myColor;

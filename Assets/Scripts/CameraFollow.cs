@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform Player;
     public float TransitionSpeed = 5f;
     public Vector3 Offset;
+    public Vector3 LookBeneath; // this could be used for start.
 
     public void Start()
     {

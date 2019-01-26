@@ -6,6 +6,7 @@ public class disapearAfter : MonoBehaviour
 {
     // Start is called before the first frame update
     // makes thing disapear after time
+    // players walk on a tile for a bit, then fall to selected place. 
     public float myTime = 15f;
     
 
