@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     float x;
     float z;
@@ -13,12 +12,20 @@ public class PlayerController : MonoBehaviour
     public float lookSpeed = 10;
     bool running = false;
     bool up = false;
+    bool fired = false;
     float jumpVelocity = 500f;
+    
+    public GameObject bulletPrefab;
+    
+    public float bulletSpeed = 100f;
 
     // Update is called once per frame
     void Update()
     {
-        ReadInputs();
+        if (isLocalPlayer)
+        {
+            ReadInputs();
+        }
     }
 
     void FixedUpdate()
@@ -30,11 +37,11 @@ public class PlayerController : MonoBehaviour
         if (transform.position != prevLoc || running)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * lookSpeed);
-          //  GetComponent<Animator>().Play("Running");
+            //  GetComponent<Animator>().Play("Running");
         }
         else
         {
-           // GetComponent<Animator>().Play("Idle");
+            // GetComponent<Animator>().Play("Idle");
         }
         #endregion Rotation and animations
 
@@ -60,5 +67,27 @@ public class PlayerController : MonoBehaviour
         {
             up = true;
         }
+        
+        if (Input.GetAxis("Fire1") != 0 && !fired)
+        {
+            fired = true;
+            StartCoroutine(ShootBullet());
+        }
+    }
+
+    private IEnumerator ShootBullet()
+    {
+        CmdShootBullet();
+        yield return new WaitForSecondsRealtime(0.5f);
+        fired = false;
+    }
+
+    [Command]
+    private void CmdShootBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+        NetworkServer.Spawn(bullet);
+        Destroy(bullet, 1.0f);
     }
 }

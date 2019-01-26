@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.Networking;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (!Player)
         {
-            Player = GameObject.FindWithTag("Player")?.GetComponent<Transform>();
+            Player = NetworkManager.singleton.client.connection.playerControllers.FirstOrDefault()?.gameObject?.GetComponent<Transform>();
         }
     }
 
