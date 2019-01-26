@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (!Player)
         {
-            Player = NetworkManager.singleton.client.connection.playerControllers.FirstOrDefault()?.gameObject?.GetComponent<Transform>();
+            Player = NetworkManager.singleton.client?.connection?.playerControllers.FirstOrDefault()?.gameObject?.GetComponent<Transform>();
         }
     }
 

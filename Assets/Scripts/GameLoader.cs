@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -13,24 +14,31 @@ public class GameLoader : NetworkBehaviour
     
     void Start()
     {
-        onlinePlayers = new List<string>();
-        var client = networkManager.StartClient();
-       // if (!client.isConnected)
-       // {
-            var nm = networkManager.StartHost();
-       // }
+        var nc = networkManager.StartHost();
+        if (nc is null)
+        {
+            networkManager.StartClient();
+        }
 
         txtName.text = GameManager.Instance.Name;
     }
-    //void OnFailedToConnect(NetworkConnectionError error)
-    //{
-    //    Debug.Log("Could not connect to server: " + error);
-    //}
 
     void Update()
     {
-        txtOnline.text = $"Online: {NetworkServer.connections.Count}";
+        txtOnline.text = $"Online: {networkManager.numPlayers}";
+       // txtOnline.text = $"Online: {NetworkServer.connections.Count}";
     }
+
+    public void OnPlayerConnected(NetworkIdentity player)
+    {
+        Debug.Log("Player connected");
+    }
+
+    public void OnPlayerDisconnected(NetworkIdentity player)
+    {
+        Debug.Log("Player disconnected");
+    }
+
     public virtual void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
     {
         //
