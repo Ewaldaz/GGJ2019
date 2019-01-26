@@ -565,6 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777494362}
   - component: {fileID: 777494361}
+  - component: {fileID: 777494363}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -584,6 +585,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510f96a9de91e664d87965c5051a1681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtOnline: {fileID: 29375189}
+  onlinePlayers: []
+  playersConnected: 0
 --- !u!4 &777494362
 Transform:
   m_ObjectHideFlags: 0
@@ -598,6 +602,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777494363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777494360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &1061300379
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +885,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   TransitionSpeed: 5
   Offset: {x: 0, y: 20, z: -50}
+  LookBeneath: {x: 0, y: 0, z: 0}
 --- !u!1 &1829114510
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,9 +1033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkManager: {fileID: 1829114512}
   txtName: {fileID: 2030156629}
-  txtOnline: {fileID: 29375189}
-  onlinePlayers: []
-  playersConnected: 0
 --- !u!1 &2013163576
 GameObject:
   m_ObjectHideFlags: 0
