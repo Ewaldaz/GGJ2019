@@ -53,13 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\playerController.cs" />
      <Compile Include="Assets\Scripts\AuraController.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Controller2.cs" />
      <Compile Include="Assets\Scripts\disapearAfter.cs" />
      <Compile Include="Assets\Scripts\GameLoader.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Smell.cs" />
+     <Compile Include="Assets\worldGen.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>Z:/Software - Unity/GGJ2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
