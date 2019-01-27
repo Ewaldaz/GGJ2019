@@ -103,4 +103,9 @@ public class PlayerPun : MonoBehaviourPun
         yield return new WaitForSecondsRealtime(0.5f);
         fired = false;
     }    
+
+    public void MakeNoise(AudioSource mySound){
+        GetComponent<AudionMan>().IWillNowPLaySound(mySound);
+    }
+
 }
