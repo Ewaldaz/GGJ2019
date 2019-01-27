@@ -124,25 +124,31 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
     }
     
     private void TimeKillsCounters(){
+
         if (sfxExtraWalkSilent == true){
             sfxExtraWalkCounter -= Time.deltaTime;
         }
+
         if (sfxExtraWalkCounter < 0f){
             sfxExtraWalkCounter = sfxExtraWalkTime;
             sfxExtraWalkSilent = false;
         }
+
         if (sfxExtraBreathingLCounter>0f){
         sfxExtraBreathingLCounter   -= Time.deltaTime;
         }
+
         if (sfxExtraBreathingHCounter>0f){
         sfxExtraBreathingHCounter   -= Time.deltaTime;
         }
+
         if (sfxExtraWoofCounter>0f){
         sfxExtraWoofCounter         -= Time.deltaTime;
         }
         if (sfxExtraPissCounter > 0f){
             sfxExtraPissCounter -= Time.deltaTime;
         }
+        
     }
     private void ReadInputs()
     {
