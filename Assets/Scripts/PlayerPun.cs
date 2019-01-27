@@ -14,6 +14,23 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
     bool up = false;
     bool fired = false;
     float jumpVelocity = 500f;
+
+
+    private float sfxExtraWalkCounter, sfxExtraWalkTime=60f/137f , // walk
+     sfxExtraBreathingLCounter, sfxExtraBreathingLTime = 13.63f, //  BreathingL
+     sfxExtraBreathingHCounter, sfxExtraBreathingHTime= 2.57f, //  BreathingH
+     sfxExtraPissCounter, sfxExtraPissTime=  5.28f, // Piss
+     sfxExtraWoofCounter, sfxExtraWoofTime= 2.78f; // Woof
+    private bool sfxExtraWalkSilent;
+    public AudioSource sfxWalk , // walking with time counter, not to be tapping too fast the step/min = 137
+    sfxWoof,
+    sfxBreathingL, 
+    sfxBreathingH, 
+    sfxFart, 
+    sfxPiss; 
+
+
+
     public int Score = 0;
     public string Name;
     protected Rigidbody Rigidbody;
@@ -47,6 +64,9 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
         if (photonView.IsMine)
         {
             ReadInputs();
+            //sfx counter
+            TimeKillsCounters();
+            
             if (Name == string.Empty)
             {
                 Name = PhotonNetwork.LocalPlayer.NickName;
@@ -95,6 +115,7 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
             {
                 GetComponent<Rigidbody>().AddForce(0, jumpVelocity, 0);
             }
+            MakeNoise(sfxWalk);
             GetComponent<Animator>().Play("jump");
             up = false;
         }
@@ -102,19 +123,44 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
         
     }
     
+    private void TimeKillsCounters(){
+        if (sfxExtraWalkSilent == true){
+            sfxExtraWalkCounter -= Time.deltaTime;
+        }
+        if (sfxExtraWalkCounter < 0f){
+            sfxExtraWalkCounter = sfxExtraWalkTime;
+            sfxExtraWalkSilent = false;
+        }
+        if (sfxExtraBreathingLCounter>0f){
+        sfxExtraBreathingLCounter   -= Time.deltaTime;
+        }
+        if (sfxExtraBreathingHCounter>0f){
+        sfxExtraBreathingHCounter   -= Time.deltaTime;
+        }
+        if (sfxExtraWoofCounter>0f){
+        sfxExtraWoofCounter         -= Time.deltaTime;
+        }
+        if (sfxExtraPissLCounter>0f){
+        sfxExtraPissLCounter        -= Time.deltaTime;
+        }
+    }
     private void ReadInputs()
     {
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
-        
+        if (!(x == 0f && z == 0f)){
+            CanWalkSFX();
+        }
         jump = Input.GetAxis("Jump");
         if (jump != 0)
         {
+            CanWalkSFX();
             up = true;
         }
         
         if (Input.GetAxis("Fire1") != 0 && !fired)
         {
+            
             fired = true;
             StartCoroutine(ShootBullet());
         }
@@ -168,4 +214,42 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
             Rigidbody.velocity = (Vector3)stream.ReceiveNext();
         }
     }
+        yield return new WaitForSecondsRealtime(0.5f);
+        fired = false;
+    }    
+
+    private void CanWalkSFX(){
+        if (!sfxExtraWalkSilent){
+            MakeNoise(sfxWalk);
+            sfxExtraWalkSilent = true;
+        }
+    }
+    private void CanBreathingLSFX(){
+        if (sfxExtraBreathingHCounter<0f){
+            sfxExtraBreathingHCounter = sfxExtraBreathingHTime;
+            MakeNoise(sfxBreathingH);
+        }
+    }
+    private void CanBreathingLSFX(){
+        if (sfxExtraBreathingLCounter<0f){
+            sfxExtraBreathingLCounter = sfxExtraBreathingLTime;
+            MakeNoise(sfxBreathingL);
+        }
+    }
+    private void CanWoofSFX(){
+        if (sfxExtraWoofCounter<0f){
+            sfxExtraWoofCounter = sfxExtraWoofTime;
+            MakeNoise(sfxWoof); 
+        }
+    }
+    private void CanPissSFX(){
+        if (sfxExtraPissCounter<0f){
+            sfxExtraPissCounter = sfxExtraPissTime;
+            MakeNoise(sfxPiss);
+        }
+    }
+    public void MakeNoise(AudioSource mySound){
+        GetComponent<AudionMan>().IWillNowPLaySound(mySound);
+    }
+
 }
