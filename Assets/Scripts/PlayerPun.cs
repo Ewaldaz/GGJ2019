@@ -140,8 +140,8 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
         if (sfxExtraWoofCounter>0f){
         sfxExtraWoofCounter         -= Time.deltaTime;
         }
-        if (sfxExtraPissLCounter>0f){
-        sfxExtraPissLCounter        -= Time.deltaTime;
+        if (sfxExtraPissCounter > 0f){
+            sfxExtraPissCounter -= Time.deltaTime;
         }
     }
     private void ReadInputs()
@@ -168,17 +168,12 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
 
     private IEnumerator ShootBullet()
     {
-        // if (PeeParticles != null)
-        // {
         if (!PeeParticles.isPlaying)
         {
             var obj = Instantiate(PeeParticles, transform.position + new Vector3(0, 2, 0), transform.rotation);
             obj.Play();
         }
-     //   obj.Play();
-            yield return new WaitForSeconds(3f);
-         //   GameObject.Destroy(obj, 3f);
-       // }
+        yield return new WaitForSeconds(1f);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -214,9 +209,6 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
             Rigidbody.velocity = (Vector3)stream.ReceiveNext();
         }
     }
-        yield return new WaitForSecondsRealtime(0.5f);
-        fired = false;
-    }    
 
     private void CanWalkSFX(){
         if (!sfxExtraWalkSilent){
@@ -224,7 +216,7 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
             sfxExtraWalkSilent = true;
         }
     }
-    private void CanBreathingLSFX(){
+    private void CanBreathingHSFX(){
         if (sfxExtraBreathingHCounter<0f){
             sfxExtraBreathingHCounter = sfxExtraBreathingHTime;
             MakeNoise(sfxBreathingH);
