@@ -15,7 +15,7 @@ public class GameLoader : NetworkBehaviour
             networkManager.StartClient();
         }
 
-        txtName.text = GameManager.Instance.Name;
+        txtName.text = GameManagerOld.Instance.Name;
     }
 
 }

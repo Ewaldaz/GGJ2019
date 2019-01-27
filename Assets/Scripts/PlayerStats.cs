@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.Networking;
 
-public class PlayerStats : NetworkBehaviour
+public class PlayerStats : MonoBehaviour
 {
     public Material[] materials;
+    private int positionRange = 30;
 
     //[SyncVar(hook = "UpdateMaterial")]
     //public int MaterialIndex = 0;
@@ -23,7 +23,11 @@ public class PlayerStats : NetworkBehaviour
     {
         int index = Random.Range(0, materials.Length);
         gameObject.GetComponentInChildren<Renderer>().material = materials[index];
-      //  gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
+
+        var x = Random.Range(-positionRange, positionRange);
+        var z = Random.Range(-positionRange, positionRange);
+        gameObject.transform.position = new Vector3(x, gameObject.transform.position.y, z);
+        //  gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
 
         // if (!isLocalPlayer)
         //// {
