@@ -10,9 +10,15 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
     public bool TriesToConnectToMaster;
     public bool TriesToConnectToRoom;
     public Text txtOnlineCount;
-    
+    public GameObject Top1;
+    public GameObject Top2;
+
     public void StartGame()
     {
+        Debug.Log("StartGame");
+        Top1.SetActive(false);
+        Top2.SetActive(true);
+
         DontDestroyOnLoad(gameObject);
         ConnectToMaster();
     }

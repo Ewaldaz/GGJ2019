@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PickedUp : MonoBehaviour
+{
+
+
+    public bool voice;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //rng which voice sound to play
+    }
+
+    
+    void OnTriggerEnter(Collider other) {
+        //if other.name == "Player" 
+        Debug.Log("Pick up event");
+        // score++
+        //instantiate some particles
+        // sound of text if voice ==true
+        this.gameObject.SetActive(false);
+    }
+
+}

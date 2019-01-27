@@ -118,19 +118,20 @@ public class PlayerController : NetworkMessageHandler
         if (transform.position != prevLoc || running)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * lookSpeed);
-            //  GetComponent<Animator>().Play("Running");
+              GetComponent<Animator>().Play("begimas");
         }
         else
         {
-            // GetComponent<Animator>().Play("Idle");
+             GetComponent<Animator>().Play("Idle");
         }
         #endregion Rotation and animations
 
         #region Jump
         if (up)
         {
-            if (GetComponent<Rigidbody>().velocity.y <= 0 && GetComponent<Rigidbody>().velocity.y > -0.01)
-            {
+            if  (GetComponent<Rigidbody>().velocity.y <= 0 && GetComponent<Rigidbody>().velocity.y > -0.01)
+            { 
+                   
                 GetComponent<Rigidbody>().AddForce(0, jumpVelocity, 0);
             }
             up = false;

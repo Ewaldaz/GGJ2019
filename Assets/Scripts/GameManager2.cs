@@ -23,7 +23,7 @@ public class GameManager2 : MonoBehaviourPunCallbacks
     }
     void Start()
     {
-        LocalPlayer = PhotonNetwork.Instantiate("PlayerDogPun", Vector3.zero, Quaternion.identity).GetComponent<PlayerPun>();
+        LocalPlayer = PhotonNetwork.Instantiate("Dodgeanimated", Vector3.zero, Quaternion.identity).GetComponent<PlayerPun>();
       //  PlayerPun.RefreshInstance(ref LocalPlayer, PlayerPrefab);
         //  LocalPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerPun>();
     }

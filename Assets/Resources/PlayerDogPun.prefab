@@ -27,8 +27,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.2786114, y: 6.1093006, z: 8.137928}
+  m_Center: {x: 0.069749475, y: 2.9731684, z: 0.22792864}
 --- !u!114 &585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,15 +204,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e54489555a674da44881780f658de4b5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e54489555a674da44881780f658de4b5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e54489555a674da44881780f658de4b5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: e54489555a674da44881780f658de4b5, type: 3}
       propertyPath: m_Bones.Array.data[0]

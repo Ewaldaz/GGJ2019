@@ -8,6 +8,7 @@ public class PlayerPun : MonoBehaviourPun
     float z;
     float jump;
     Vector3 prevLoc;
+    public float moveSpeed = 20f;
     public float lookSpeed = 10;
     bool running = false;
     bool up = false;
@@ -47,17 +48,20 @@ public class PlayerPun : MonoBehaviourPun
     void FixedUpdate()
     {
         prevLoc = transform.position;
-        transform.position = transform.position + new Vector3(x, 0, z);
+        transform.position = transform.position + new Vector3(x * moveSpeed * Time.deltaTime, 0, z * moveSpeed * Time.deltaTime);
 
         #region Rotation and animations
         if (transform.position != prevLoc || running)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - prevLoc), Time.fixedDeltaTime * lookSpeed);
-            //  GetComponent<Animator>().Play("Running");
+              GetComponent<Animator>().Play("begimas");
         }
         else
         {
-            // GetComponent<Animator>().Play("Idle");
+            if (GetComponent<Rigidbody>().velocity.y <= 0 && GetComponent<Rigidbody>().velocity.y > -0.01)
+            {
+                GetComponent<Animator>().Play("Idle");
+            }
         }
         #endregion Rotation and animations
 
@@ -68,6 +72,7 @@ public class PlayerPun : MonoBehaviourPun
             {
                 GetComponent<Rigidbody>().AddForce(0, jumpVelocity, 0);
             }
+            GetComponent<Animator>().Play("jump");
             up = false;
         }
         #endregion Jump
@@ -78,11 +83,12 @@ public class PlayerPun : MonoBehaviourPun
     {
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
-
+        
         jump = Input.GetAxis("Jump");
         if (jump != 0)
         {
             up = true;
+          //  GetComponent<Animator>().Play("Idle");
         }
         
         if (Input.GetAxis("Fire1") != 0 && !fired)

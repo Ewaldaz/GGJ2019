@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerStats : MonoBehaviour
     //  [SyncVar]
     public string Name;
 
+    public int Score;
+
     //[SyncVar(hook = "UpdateMaterial")]
    // public Material material;
 
@@ -21,6 +24,8 @@ public class PlayerStats : MonoBehaviour
     //}
     void Start()
     {
+        Name = PhotonNetwork.NickName;
+            
         int index = Random.Range(0, materials.Length);
         gameObject.GetComponentInChildren<Renderer>().material = materials[index];
 

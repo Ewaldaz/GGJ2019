@@ -1,0 +1,630 @@
+fileFormatVersion: 2
+guid: c275760e09d0e1344b61fb41c89d5b77
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: Dog_Chest
+    100006: Dog_Chest2
+    100008: Dog_FrontLefLowerArm
+    100010: Dog_FrontLeftHand
+    100012: Dog_FrontLeftUpperArm
+    100014: Dog_FrontRightHand
+    100016: Dog_FrontRightLowerArm
+    100018: Dog_FrontRightUpperArm
+    100020: Dog_Head
+    100022: Dog_hips
+    100024: Dog_LeftEar
+    100026: Dog_neck
+    100028: Dog_RearLeftFeet
+    100030: Dog_RearLeftUpperLeg
+    100032: Dog_RearRightFeet
+    100034: Dog_RearRightLowerLeg
+    100036: Dog_RearRightUpperLeg
+    100038: Dog_RightEar
+    100040: Dog_Spine
+    100042: Dog_UpperChest
+    100044: Good Boy
+    100046: RearLeftLowerLeg
+    100048: Tail
+    100050: Tail2
+    100052: Tail3
+    400000: Armature
+    400002: //RootNode
+    400004: Dog_Chest
+    400006: Dog_Chest2
+    400008: Dog_FrontLefLowerArm
+    400010: Dog_FrontLeftHand
+    400012: Dog_FrontLeftUpperArm
+    400014: Dog_FrontRightHand
+    400016: Dog_FrontRightLowerArm
+    400018: Dog_FrontRightUpperArm
+    400020: Dog_Head
+    400022: Dog_hips
+    400024: Dog_LeftEar
+    400026: Dog_neck
+    400028: Dog_RearLeftFeet
+    400030: Dog_RearLeftUpperLeg
+    400032: Dog_RearRightFeet
+    400034: Dog_RearRightLowerLeg
+    400036: Dog_RearRightUpperLeg
+    400038: Dog_RightEar
+    400040: Dog_Spine
+    400042: Dog_UpperChest
+    400044: Good Boy
+    400046: RearLeftLowerLeg
+    400048: Tail
+    400050: Tail2
+    400052: Tail3
+    2100000: Doge
+    4300000: Good Boy
+    7400000: Atsistojimas_animacija
+    7400002: IDLE_animacija
+    7400004: Valgymas_gerimas
+    7400006: pissing
+    7400008: striksi_pissing
+    7400010: Roarrring
+    9500000: //RootNode
+    13700000: Good Boy
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'souKitas' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Dog_Chest2' has translation animation that
+      will be discarded.\n\t'Dog_UpperChest' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Dog_FrontLeftHand' has translation
+      animation that will be discarded.\n\t'Dog_FrontRightUpperArm' has translation
+      animation that will be discarded.\n\t'Dog_FrontRightHand' has translation animation
+      that will be discarded.\n\t'RearLeftLowerLeg' has translation animation that
+      will be discarded.\n\t'Dog_RearLeftFeet' has translation animation that will
+      be discarded.\n\t'Dog_RearRightLowerLeg' has translation animation that will
+      be discarded.\n\t'Dog_RearRightFeet' has translation animation that will be
+      discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Atsistojimas_animacija
+      takeName: souKitas
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: IDLE_animacija
+      takeName: souKitas
+      firstFrame: 25
+      lastFrame: 105
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Valgymas_gerimas
+      takeName: souKitas
+      firstFrame: 107
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pissing
+      takeName: souKitas
+      firstFrame: 180
+      lastFrame: 257
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: striksi_pissing
+      takeName: souKitas
+      firstFrame: 257
+      lastFrame: 321
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roarrring
+      takeName: souKitas
+      firstFrame: 322
+      lastFrame: 415
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Dog_hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RearLeftUpperLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RearRightUpperLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RearLeftLowerLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RearRightLowerLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RearLeftFeet
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RearRightFeet
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontLeftUpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontRightUpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontLefLowerArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontRightLowerArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontLeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_FrontRightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_LeftEar
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_RightEar
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Dog_Chest2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Dodge_withAnimations(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Dodge_withAnimations(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Dog_hips
+      parentName: Armature
+      position: {x: 0, y: 0.006196308, z: 0.026238263}
+      rotation: {x: 0.7071065, y: 0.00071582705, z: 0.0007158273, w: 0.7071065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_RearLeftUpperLeg
+      parentName: Dog_hips
+      position: {x: -0.006456712, y: 0.007047722, z: 0.0061959196}
+      rotation: {x: 0.9923734, y: -0.03172841, z: 0.060275223, w: 0.102738895}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: RearLeftLowerLeg
+      parentName: Dog_RearLeftUpperLeg
+      position: {x: 1.4901161e-10, y: 0.0150038265, z: 0.000000004171452}
+      rotation: {x: 0.07918426, y: -0.018278476, z: -0.12527414, w: 0.98878825}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_RearLeftFeet
+      parentName: RearLeftLowerLeg
+      position: {x: -7.4505804e-11, y: 0.01503612, z: 0.0000000032887328}
+      rotation: {x: -0.9172451, y: 0.15624869, z: -0.28285092, w: 0.23290178}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Dog_RearRightUpperLeg
+      parentName: Dog_hips
+      position: {x: 0.0060676998, y: 0.00704772, z: 0.006195933}
+      rotation: {x: 0.99315643, y: 0.032386087, z: -0.045806315, w: 0.102437064}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Dog_RearRightLowerLeg
+      parentName: Dog_RearRightUpperLeg
+      position: {x: -1.4901161e-10, y: 0.015238298, z: 0.0000000013038516}
+      rotation: {x: 0.078165986, y: 0.01932357, z: 0.127609, w: 0.9885508}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Dog_RearRightFeet
+      parentName: Dog_RearRightLowerLeg
+      position: {x: -8.5681673e-10, y: 0.014939042, z: 0.0000000015646219}
+      rotation: {x: -0.9384027, y: -0.2003461, z: 0.17669873, w: 0.21917894}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Dog_Spine
+      parentName: Dog_hips
+      position: {x: 6.26497e-15, y: 0.009745416, z: -0.000000002628026}
+      rotation: {x: -0.35955003, y: 0.00000023360221, z: -0.0000004871952, w: 0.93312585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_Chest
+      parentName: Dog_Spine
+      position: {x: -0.000000009605572, y: 0.0064674574, z: 0.005886098}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_Chest2
+      parentName: Dog_Chest
+      position: {x: -0.000000010795897, y: 0.0072688097, z: 0.006615505}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_UpperChest
+      parentName: Dog_Chest2
+      position: {x: -0.000000015247165, y: 0.01044084, z: 0.009497676}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_FrontLeftUpperArm
+      parentName: Dog_UpperChest
+      position: {x: -0.008266921, y: -0.0041897898, z: 0.006649959}
+      rotation: {x: 0.66806984, y: -0.6597014, z: 0.241744, w: 0.24502392}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_FrontLefLowerArm
+      parentName: Dog_FrontLeftUpperArm
+      position: {x: 5.2154064e-10, y: 0.012469254, z: -0.0000000010058283}
+      rotation: {x: -0.040034607, y: 0.00023411206, z: 0.0052556377, w: 0.9991845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_FrontLeftHand
+      parentName: Dog_FrontLefLowerArm
+      position: {x: -7.4505804e-11, y: 0.012264619, z: 1.4901161e-10}
+      rotation: {x: -0.4895944, y: -0.1673104, z: 0.11643672, w: 0.8477895}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Dog_FrontRightUpperArm
+      parentName: Dog_UpperChest
+      position: {x: 0.007967587, y: -0.0042186785, z: 0.0067124492}
+      rotation: {x: 0.67325354, y: 0.6601077, z: -0.23272786, w: 0.23838055}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_FrontRightLowerArm
+      parentName: Dog_FrontRightUpperArm
+      position: {x: 1.4901161e-10, y: 0.012469255, z: 3.7252902e-11}
+      rotation: {x: -0.025355723, y: -0.005784675, z: 0.018933235, w: 0.9994825}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: Dog_FrontRightHand
+      parentName: Dog_FrontRightLowerArm
+      position: {x: -4.0978193e-10, y: 0.012207005, z: -0.0000000014528632}
+      rotation: {x: -0.4970553, y: 0.048439566, z: -0.07005523, w: 0.8635287}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_neck
+      parentName: Dog_UpperChest
+      position: {x: -9.449359e-10, y: 0.0114717465, z: 0.00058861426}
+      rotation: {x: 0.12405448, y: -0.000000003853571, z: 0.00000020347203, w: 0.9922754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dog_Head
+      parentName: Dog_neck
+      position: {x: 3.3191075e-10, y: 0.010575883, z: 0.00000000816446}
+      rotation: {x: 0.7263237, y: 0.00000015025148, z: 0.0000009722654, w: 0.6873528}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Dog_LeftEar
+      parentName: Dog_Head
+      position: {x: -0.0072045326, y: -0.0029792108, z: -0.0043093767}
+      rotation: {x: -0.6900805, y: 0.23396248, z: 0.20299661, w: 0.65409696}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999976}
+    - name: Dog_RightEar
+      parentName: Dog_Head
+      position: {x: 0.0070947027, y: -0.0031246643, z: -0.005061857}
+      rotation: {x: -0.7015968, y: -0.21807931, z: -0.18498737, w: 0.6526738}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail
+      parentName: Dog_hips
+      position: {x: -0.000000024495215, y: -0.00065840245, z: -0.0011844683}
+      rotation: {x: 0.95154375, y: -0.0000005509603, z: 0.000017086766, w: -0.3075134}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Tail2
+      parentName: Tail
+      position: {x: 4.5474734e-15, y: 0.008013548, z: 0.0000000023856184}
+      rotation: {x: 0.29394826, y: 0.00000004336381, z: 0.0000040340265, w: 0.95582134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail3
+      parentName: Tail2
+      position: {x: -2.728484e-14, y: 0.0040212725, z: 2.7639447e-12}
+      rotation: {x: 0.49798486, y: 0.000000010146788, z: 0.00000963628, w: 0.8671857}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Good Boy
+      parentName: Dodge_withAnimations(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
