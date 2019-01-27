@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/WelcomeScreen.unity
+- path: Assets/Scenes/WorldPun.unity
   isLoaded: 1
   isActive: 1

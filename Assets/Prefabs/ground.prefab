@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6198549250879417440}
   - component: {fileID: 2200846715428606516}
   - component: {fileID: 3248911117134927836}
+  - component: {fileID: 711623923}
+  - component: {fileID: 886269269761128684}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -92,3 +94,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &711623923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2888338007253404974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2, z: 10}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &886269269761128684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2888338007253404974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afdcef89110f58f43a35aa57e4ec2f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voice: 0

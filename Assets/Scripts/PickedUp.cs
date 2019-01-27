@@ -16,13 +16,13 @@ public class PickedUp : MonoBehaviour
     }
 
     
-    void OnTriggerEnter(Collider other) {
-        //if other.name == "Player" 
-        Debug.Log("Pick up event");
-        // score++
-        //instantiate some particles
-        // sound of text if voice ==true
-        this.gameObject.SetActive(false);
+    void OnTriggerEnter(Collider other)
+    {        
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Pick up event");
+            other.gameObject.GetComponent<PlayerPun>().IncreaseScore();
+        }
     }
 
 }

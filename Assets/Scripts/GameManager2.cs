@@ -31,8 +31,9 @@ public class GameManager2 : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
-        PlayerPun.RefreshInstance(ref LocalPlayer, PlayerPrefab);
+      //  PlayerPun.RefreshInstance(ref LocalPlayer, PlayerPrefab);
     }
+
 
 
     //public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player target, ExitGames.Client.Photon.Hashtable changedProps)

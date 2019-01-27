@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerPun : MonoBehaviourPun
+public class PlayerPun : MonoBehaviourPun, IPunObservable
 {
     float x;
     float z;
@@ -14,12 +14,17 @@ public class PlayerPun : MonoBehaviourPun
     bool up = false;
     bool fired = false;
     float jumpVelocity = 500f;
-        
+    public int Score = 0;
+    public string Name;
+    protected Rigidbody Rigidbody;
+    public ParticleSystem PeeParticles;
+
     private void Awake()
     {
+        Rigidbody = GetComponent<Rigidbody>();
         //destroy the controller if the player is not controlled by me
-       // if (!photonView.IsMine && GetComponent<PlayerController>() != null)
-       //     Destroy(GetComponent<PlayerController>());
+        // if (!photonView.IsMine && GetComponent<PlayerController>() != null)
+        //     Destroy(GetComponent<PlayerController>());
     }
     public static void RefreshInstance(ref PlayerPun player, PlayerPun Prefab)
     {
@@ -42,6 +47,24 @@ public class PlayerPun : MonoBehaviourPun
         if (photonView.IsMine)
         {
             ReadInputs();
+            if (Name == string.Empty)
+            {
+                Name = PhotonNetwork.LocalPlayer.NickName;
+            }
+        }
+    }
+
+    public void IncreaseScore(int amount = 1)
+    {
+        if (photonView.IsMine)
+        {
+            Score += amount;
+
+            if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("score"))
+            {
+                PhotonNetwork.LocalPlayer.CustomProperties.Remove("score");
+            }
+            PhotonNetwork.LocalPlayer.CustomProperties.Add("score", Score);
         }
     }
 
@@ -88,7 +111,6 @@ public class PlayerPun : MonoBehaviourPun
         if (jump != 0)
         {
             up = true;
-          //  GetComponent<Animator>().Play("Idle");
         }
         
         if (Input.GetAxis("Fire1") != 0 && !fired)
@@ -100,7 +122,50 @@ public class PlayerPun : MonoBehaviourPun
 
     private IEnumerator ShootBullet()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
-        fired = false;
-    }    
+        // if (PeeParticles != null)
+        // {
+        if (!PeeParticles.isPlaying)
+        {
+            var obj = Instantiate(PeeParticles, transform.position + new Vector3(0, 2, 0), transform.rotation);
+            obj.Play();
+        }
+     //   obj.Play();
+            yield return new WaitForSeconds(3f);
+         //   GameObject.Destroy(obj, 3f);
+       // }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(Name);
+            stream.SendNext(Score);
+            stream.SendNext(Rigidbody.position);
+            stream.SendNext(Rigidbody.rotation);
+            stream.SendNext(Rigidbody.velocity);
+        }
+        else
+        {
+            Name = (string)stream.ReceiveNext();
+            Score = (int)stream.ReceiveNext();
+
+            Debug.Log($"{Name}: {Score}");
+            foreach (var player in PhotonNetwork.PlayerListOthers)
+            {
+                if (Name == player.NickName)
+                {
+                    if (player.CustomProperties.ContainsKey("score"))
+                    {
+                        player.CustomProperties.Remove("score");
+                    }
+                    player.CustomProperties.Add("score", Score);
+                }
+            }
+
+            Rigidbody.position = (Vector3)stream.ReceiveNext();
+            Rigidbody.rotation = (Quaternion)stream.ReceiveNext();
+            Rigidbody.velocity = (Vector3)stream.ReceiveNext();
+        }
+    }
 }

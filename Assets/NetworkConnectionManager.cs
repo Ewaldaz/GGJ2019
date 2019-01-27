@@ -1,8 +1,11 @@
 ﻿using Photon.Pun;
 using Photon.Realtime;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 
 public class NetworkConnectionManager : MonoBehaviourPunCallbacks
 {
@@ -19,8 +22,12 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         Top1.SetActive(false);
         Top2.SetActive(true);
 
-        DontDestroyOnLoad(gameObject);
         ConnectToMaster();
+    }
+
+    public void Start()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     public void ConnectToMaster()
@@ -86,10 +93,49 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         if (txtOnlineCount)
         {
             txtOnlineCount.text = $"Online: {PhotonNetwork.CurrentRoom.PlayerCount}";
+
+            List<Scoreboard> scores = new List<Scoreboard>();
+
+            Debug.Log(PhotonNetwork.LocalPlayer);
+
+            if (!(PhotonNetwork.LocalPlayer is null))
+            {
+                int score = PhotonNetwork.LocalPlayer.CustomProperties["score"] != null ? (int)PhotonNetwork.LocalPlayer.CustomProperties["score"] : 0;
+                
+                scores.Add(new Scoreboard() { Nickname = PhotonNetwork.LocalPlayer.NickName, Score = score });
+                Debug.Log($"{PhotonNetwork.LocalPlayer.NickName}: {score}");
+            }
+
+            try
+            {
+                foreach (var player in PhotonNetwork.PlayerListOthers)
+                {
+                    int score = player.CustomProperties["score"] != null ? (int)player.CustomProperties["score"] : 0;
+                    scores.Add(new Scoreboard() { Nickname = player.NickName, Score = score });
+                }
+            }
+            catch { }
+
+            foreach (var s in scores.OrderByDescending(x => x.Score))
+            {
+                txtOnlineCount.text += $"{Environment.NewLine}{s.Nickname}: {s.Score}";
+            }
+
+            
+            //foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
+            //{
+            //    txtOnlineCount.text += $"{Environment.NewLine}{player.GetComponent<PlayerPun>().Name}: {player.GetComponent<PlayerPun>().Score}";
+            //}
         }
         if (txtUsername && PhotonNetwork.NickName != string.Empty)
         {
             txtUsername.text = PhotonNetwork.NickName;
         }
+    }
+
+    private struct Scoreboard
+    {
+        public string Nickname { get; set; }
+        public int Score { get; set; }
     }
 }
