@@ -14,7 +14,17 @@ public class PlayerPun : MonoBehaviourPun
     bool up = false;
     bool fired = false;
     float jumpVelocity = 500f;
-        
+
+
+    private float sfxExtraWalkCounter, sfxExtraWalkTime=60f/137f; 
+
+    public AudioSource sfxWalk , // walking with time counter, not to be tapping too fast the step/min = 137
+    sfxWoof,
+    sfxBreathingL , 
+    sfxBreathingH , 
+    sfxFart , 
+    sfxPiss; 
+
     private void Awake()
     {
         //destroy the controller if the player is not controlled by me
@@ -42,6 +52,15 @@ public class PlayerPun : MonoBehaviourPun
         if (photonView.IsMine)
         {
             ReadInputs();
+            //sfx counter
+            if (sfxExtraWalkSilent == true){
+                sfxExtraWalkCounter -= Time.deltaTime;
+            }
+
+            if (sfxExtraWalkCounter < 0f){
+                sfxExtraWalkCounter = sfxExtraWalkTime;
+                sfxExtraWalkSilent = false;
+            }
         }
     }
 
@@ -83,7 +102,10 @@ public class PlayerPun : MonoBehaviourPun
     {
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
-        
+        if (!(x == 0f && z == 0f)){
+            MakeNoise(sfxWalk);
+            sfxExtraWalkSilent = true;
+        }
         jump = Input.GetAxis("Jump");
         if (jump != 0)
         {

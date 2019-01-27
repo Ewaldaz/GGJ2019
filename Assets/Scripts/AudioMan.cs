@@ -34,7 +34,9 @@ public class AudionMan : MonoBehaviourPun
             for (int i =0; i<myAudio.Length;i++ ){
                 if (myAudio[i].clip == AudioGet.clip)
                 {
-                    IndexesToPlay = i;
+                IndexesToPlay.Array.Resize(ref result, result.Length + 1);// cia taip? 
+
+                    IndexesToPlay[IndexesToPlay.Length-1] = i; // just adding a new index
                     break; // jeigu sitas garsas jau yra liste, tai tiesiog paleisk
                 } 
                 else 
@@ -49,8 +51,5 @@ public class AudionMan : MonoBehaviourPun
             myAudio[0] = AudioGet;
         }
     }
-
-// just the getters and setters
-    public AudioSource[] MyAudio { get => myAudio; set => myAudio = value; }
 
 }
