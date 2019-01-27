@@ -36,6 +36,7 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
     protected Rigidbody Rigidbody;
     public ParticleSystem PeeParticles;
 
+
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
@@ -45,17 +46,17 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
     }
     public static void RefreshInstance(ref PlayerPun player, PlayerPun Prefab)
     {
-        Debug.Log("RefreshInstance");
-        var position = Vector3.zero;
-        var rotation = Quaternion.identity;
-        if (player != null)
-        {
-            position = player.transform.position;
-            rotation = player.transform.rotation;
-            PhotonNetwork.Destroy(player.gameObject);
-        }
+        //Debug.Log("RefreshInstance");
+        //var position = Vector3.zero;
+        //var rotation = Quaternion.identity;
+        //if (player != null)
+        //{
+        //    position = player.transform.position;
+        //    rotation = player.transform.rotation;
+        //    PhotonNetwork.Destroy(player.gameObject);
+        //}
 
-        player = PhotonNetwork.Instantiate(Prefab.gameObject.name, position, rotation).GetComponent<PlayerPun>();
+        //player = PhotonNetwork.Instantiate(Prefab.gameObject.name, position, rotation).GetComponent<PlayerPun>();
     }
     
 
@@ -165,8 +166,7 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
         }
         
         if (Input.GetAxis("Fire1") != 0 && !fired)
-        {
-            
+        {            
             fired = true;
             StartCoroutine(ShootBullet());
         }
@@ -174,12 +174,10 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
 
     private IEnumerator ShootBullet()
     {
-        if (!PeeParticles.isPlaying)
-        {
-            var obj = Instantiate(PeeParticles, transform.position + new Vector3(0, 2, 0), transform.rotation);
-            obj.Play();
-        }
+        var obj = Instantiate(PeeParticles, transform.position + new Vector3(0, 2, 0), transform.rotation);
         yield return new WaitForSeconds(1f);
+        Destroy(obj, 5f);
+        fired = false;
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -247,7 +245,7 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
         }
     }
     public void MakeNoise(AudioSource mySound){
-        GetComponent<AudionMan>().IWillNowPLaySound(mySound);
+        FindObjectOfType<AudioMan>().IWillNowPlaySound(mySound);
     }
 
 }

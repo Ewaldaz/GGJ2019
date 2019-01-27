@@ -113,7 +113,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 1
-  controlID: 26330
+  controlID: 228
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 26331
+  controlID: 229
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 424}
   m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 26332
+  controlID: 230
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 498}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 26421
+  controlID: 296
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,7 +350,7 @@ MonoBehaviour:
     width: 833
     height: 458
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -469,9 +469,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.00064766436, y: 0.9984705, z: -0.05396991, w: 0.011982291}
   m_Size:
-    m_Target: 24.397099
+    m_Target: 34.566578
     speed: 2
-    m_Value: 24.397099
+    m_Value: 34.566578
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -611,20 +611,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: Z:\Software - Unity\GGJ2019
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e0c0000
-    m_LastClickedID: 3134
-    m_ExpandedIDs: 00000000780b0000660d00008a11000000ca9a3b
+    m_SelectedIDs: 34280000
+    m_LastClickedID: 10292
+    m_ExpandedIDs: 00000000342800003a2a0000662e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +652,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000780b0000660d00008a11000000ca9a3b
+    m_ExpandedIDs: 0000000034280000662e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -762,9 +762,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1621aefe7638f6fed42a17fff62a17ff422d17ff562d17ff702d17ff4abb1dff0abd1dff4e4824ff704824ffbc4a24ffd04a24ffea4a24ffa6da2aff326731ff6c1745ff1ca44bff320c58ff540c58ffa00e58ffb40e58ffce0e58ff064a68ff284a68ff744c68ff884c68ffa24c68fff0b56dff12b66dff5eb86dff72b86dff8cb86dff328d78ff548d78ffa08f78ffb48f78ffce8f78ff16fa7dff38fa7dff84fc7dff98fc7dffb2fc7dff42478eff46478eff4a1799ff4c1799ff9cf3a3ffc0f3a3ff0cf6a3ff20f6a3ff54f6a3ffd262a9ff8a9bb9fff4aab9ff16abb9ff62adb9ff76adb9ff90adb9ff844ccfffa64ccffff24ecfff064fcfff204fcfffd01fdaff4e85dfff5aebe4ff84ede4ff0423f5ff2623f5ff7225f5ff8625f5ffa025f5ffaef6ffffd0f6ffff2af9ffff40f9ffff5af9ffff92faffffd4fbffffa4150000966f0000b86f0000f27b00000c7c0000147c0000
+      m_SelectedIDs: 66320000
+      m_LastClickedID: 12902
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -843,12 +843,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1368
+    x: 1360
     y: 73
-    width: 550
+    width: 558
     height: 927
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/unet
+  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   m_GlobalObjectTypeName: 
   m_RegisteredViewURLs:
   - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
