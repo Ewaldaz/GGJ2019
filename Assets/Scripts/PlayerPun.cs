@@ -46,17 +46,17 @@ public class PlayerPun : MonoBehaviourPun, IPunObservable
     }
     public static void RefreshInstance(ref PlayerPun player, PlayerPun Prefab)
     {
-        //Debug.Log("RefreshInstance");
-        //var position = Vector3.zero;
-        //var rotation = Quaternion.identity;
-        //if (player != null)
-        //{
-        //    position = player.transform.position;
-        //    rotation = player.transform.rotation;
-        //    PhotonNetwork.Destroy(player.gameObject);
-        //}
+        Debug.Log("RefreshInstance");
+        var position = Vector3.zero;
+        var rotation = Quaternion.identity;
+        if (player != null)
+        {
+            position = player.transform.position;
+            rotation = player.transform.rotation;
+            PhotonNetwork.Destroy(player.gameObject);
+        }
 
-        //player = PhotonNetwork.Instantiate(Prefab.gameObject.name, position, rotation).GetComponent<PlayerPun>();
+        player = PhotonNetwork.Instantiate(Prefab.gameObject.name, position, rotation).GetComponent<PlayerPun>();
     }
     
 

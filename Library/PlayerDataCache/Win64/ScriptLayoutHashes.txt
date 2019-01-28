@@ -3,7 +3,6 @@ PlayerPath?
 Z:/Software - Unity/GGJ2019/Builds/GGJ2019.exe
 SceneListBegin?
 Assets/Scenes/WelcomeScreen.unity
-Assets/Scenes/World.unity
 Assets/Scenes/WorldPun.unity
 SceneListEnd?
 80d2851602cb4bcb6f559596c5eb955b Assembly-CSharp.dll:Photon.Pun.Demo.Cockpit.PlayerListCell

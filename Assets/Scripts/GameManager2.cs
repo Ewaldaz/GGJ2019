@@ -28,6 +28,14 @@ public class GameManager2 : MonoBehaviourPunCallbacks
         //  LocalPlayer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity).GetComponent<PlayerPun>();
     }
 
+    void Update()
+    {
+        if (!LocalPlayer)
+        {
+          //  LocalPlayer = PhotonNetwork.LocalPlayer
+        }
+    }
+
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);

@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 643}
   m_Layer: 0
   m_Name: Dodgeanimated
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,6 +423,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 643}
   - {fileID: 641}
+  - {fileID: 642}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

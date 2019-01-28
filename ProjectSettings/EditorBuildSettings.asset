@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/WelcomeScreen.unity
     guid: 833e32543f6830540ba12c241dce3188
   - enabled: 1
-    path: Assets/Scenes/World.unity
-    guid: 95edd070941ad9d498fc25c6bbade48c
-  - enabled: 1
     path: Assets/Scenes/WorldPun.unity
     guid: a52732f53c1f8f940b586431a79c99e0
   m_configObjects: {}

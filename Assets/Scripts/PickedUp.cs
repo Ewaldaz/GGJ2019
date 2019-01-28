@@ -15,9 +15,12 @@ public class PickedUp : MonoBehaviour
         //rng which voice sound to play
     }
 
-    
+
     void OnTriggerEnter(Collider other)
-    {        
+    {
+        Debug.Log("OnTriggerEnter");
+        Debug.Log(other.gameObject.tag);
+
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Pick up event");
